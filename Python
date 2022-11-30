@@ -1,0 +1,22 @@
+def on_button_pressed_b():
+    strip.set_pixel_color(3, neopixel.colors(NeoPixelColors.GREEN))
+    strip.set_pixel_color(2, neopixel.colors(NeoPixelColors.GREEN))
+    strip.show()
+    strip.clear()
+    basic.pause(1000)
+    strip.set_pixel_color(1, neopixel.colors(NeoPixelColors.YELLOW))
+    strip.set_pixel_color(2, neopixel.colors(NeoPixelColors.YELLOW))
+    strip.show()
+    strip.clear()
+    basic.pause(1000)
+    strip.set_pixel_color(0, neopixel.colors(NeoPixelColors.RED))
+    strip.set_pixel_color(1, neopixel.colors(NeoPixelColors.RED))
+    strip.show()
+    strip.clear()
+input.on_button_pressed(Button.B, on_button_pressed_b)
+
+strip: neopixel.Strip = None
+strip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
+strip.clear()
+strip.show()
+basic.show_icon(IconNames.YES)
